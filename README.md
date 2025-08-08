@@ -26,5 +26,5 @@ DOI:
 Moritz Flaschel, Denisa Martonová, Carina Veil and Ellen Kuhl  
 Supplementary software for "Material Fingerprinting: A shortcut to material model discovery without solving optimization problems"  
 2025  
-DOI: 
+DOI: http://doi.org/10.5281/zenodo.16778796
 ```
