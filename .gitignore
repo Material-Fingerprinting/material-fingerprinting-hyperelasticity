@@ -1,0 +1,25 @@
+# ignore chache
+*__pycache__*
+
+# ignore venv
+*.venv*
+
+# ignore image files
+*.jpg
+*.pdf
+*.png
+!plots/abstract.png
+!plots/logo.png
+!plots/pattern_recognition_matrices.png
+
+# ignore data files
+*.h5
+*.pickle
+*.vtu
+*.xdmf
+
+# mac
+*.DS_Store
+
+
+
