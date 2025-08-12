@@ -14,16 +14,16 @@ At the core of Material Fingerprinting is a straightforward pattern recognition 
 ## Reference
 
 ```
-Moritz Flaschel, Denisa Martonová, Carina Veil and Ellen Kuhl  
+Moritz Flaschel, Denisa Martonová, Carina Veil, and Ellen Kuhl  
 Material Fingerprinting: A shortcut to material model discovery without solving optimization problems  
 2025  
-DOI: 
+DOI: https://doi.org/10.48550/arXiv.2508.07831
 ```
 
 ## How to cite the code
 
 ```
-Moritz Flaschel, Denisa Martonová, Carina Veil and Ellen Kuhl  
+Moritz Flaschel, Denisa Martonová, Carina Veil, and Ellen Kuhl  
 Supplementary software for "Material Fingerprinting: A shortcut to material model discovery without solving optimization problems"  
 2025  
 DOI: http://doi.org/10.5281/zenodo.16778796
