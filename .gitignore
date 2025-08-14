@@ -15,8 +15,14 @@
 # ignore data files
 *.h5
 *.pickle
+*.tar.gz
 *.vtu
+*.whl
 *.xdmf
+
+# ignore build artifacts
+dist/
+build/
 
 # mac
 *.DS_Store
