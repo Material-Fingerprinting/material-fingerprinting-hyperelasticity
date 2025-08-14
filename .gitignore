@@ -23,6 +23,7 @@
 # ignore build artifacts
 dist/
 build/
+*.egg-info/
 
 # mac
 *.DS_Store
