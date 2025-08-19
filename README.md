@@ -10,6 +10,11 @@ The figure above illustrates the concept of Material Fingerprinting in both dire
 
 At the core of Material Fingerprinting is a straightforward pattern recognition algorithm. The figure above demonstrates how a new measurement is compared against all fingerprints in the database, correctly identifying the underlying material model — in this case, the Ogden model.
 
+## About this repository
+
+This repository provides the code and data accompanying the publication [Material Fingerprinting: A shortcut to material model discovery without solving optimization problems](https://doi.org/10.48550/arXiv.2508.07831).
+To ensure reproducibility, the contents of this repository remain unchanged.
+For the actively maintained, pip-installable version of Material Fingerprinting, please visit [https://github.com/Material-Fingerprinting/material-fingerprinting](https://github.com/Material-Fingerprinting/material-fingerprinting).
 
 ## Reference
 
