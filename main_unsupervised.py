@@ -117,6 +117,14 @@ def error_strain_energy_density_incompressible_lam(parameters_true,parameters_di
 
     return integral_diff / integral_W_true
 
+def error_r2(exp_f_reaction,exp_f_u,model_f_reaction,model_f_u):
+    exp_f = np.concatenate([exp_f_reaction, exp_f_u])
+    model_f = np.concatenate([model_f_reaction, model_f_u])
+    ss_res = np.sum((exp_f - model_f)**2)
+    ss_tot = np.sum((exp_f - np.mean(exp_f))**2)
+    r2 = 1.0 - ss_res / ss_tot
+    return r2
+
 def identify(database_path,exp_path,measure = "INNER",lam = 1.0,VERBOSE = True):
 
     """
@@ -167,6 +175,10 @@ def identify(database_path,exp_path,measure = "INNER",lam = 1.0,VERBOSE = True):
         print("Error (compressible): " + "{:.2e}".format(error_compressible))
         error_incompressible = error_strain_energy_density_incompressible_lam(exp_parameters_true, parameters_discovered)
         print("Error (incompressible): " + "{:.2e}".format(error_incompressible))
+        model_f_reaction = database_f_reaction[id,:] * f_reaction_norm # note that database_f_reaction[id,:] must be normalized
+        model_f_u = database_f_u[id,:]
+        error = error_r2(exp_f_reaction,exp_f_u,model_f_reaction,model_f_u)
+        print("Error (R2): " + "{:.4f}".format(error))
         # print("Discovered identifier: " + str(id))
         # print("Discovered measure: " + str(measure[id]))
 
