@@ -14,6 +14,7 @@ import numpy as np
 import scipy
 import scipy.integrate
 
+from material_fingerprinting.Experiment import *
 from material_fingerprinting.Kinematics import *
 
 class Material():
@@ -271,6 +272,42 @@ def get_error_strain_energy_density_incompressible_lam(mat_true,parameters_true,
     integral_W_true, _ = scipy.integrate.dblquad(integrand_W_true, x_lower, x_upper, y_lower, y_upper)
 
     return integral_diff / integral_W_true
+
+def get_error_r2(mat_true,parameters_true,mat_disc,parameters_disc,experiment_union):
+
+    measurement_true = mat_true.conduct_experiment_union(experiment_union,parameters_true).squeeze()
+    measurement_disc = mat_disc.conduct_experiment_union(experiment_union,parameters_disc).squeeze()
+
+    ss_res = np.sum((measurement_true - measurement_disc) ** 2)
+    ss_tot = np.sum((measurement_true - np.mean(measurement_true)) ** 2)
+    r2 = 1 - ss_res / ss_tot
+
+    return r2
+
+# R² values for each experiment
+# def compute_r2(measurement_list, model_disc, parameters_disc):
+#     """
+#     Computes R² values for each experiment and the average R² for a discovered model.
+#     """
+#     mat = Material(name=model_disc)
+#     r2_per_experiment = {}
+
+#     for m in measurement_list:
+#         # Define experiment with the same control as the measurement
+#         exp = Experiment(name=m.experiment_name)
+#         exp.set_control(m.control)
+
+#         # Compute predicted measurements
+#         prediction = mat.conduct_experiment(exp, parameters=parameters_disc).squeeze()
+        
+#         # Compute R² manually
+#         ss_res = np.sum((m.measurement - prediction) ** 2)
+#         ss_tot = np.sum((m.measurement - np.mean(m.measurement)) ** 2)
+#         r2 = 1 - ss_res / ss_tot
+#         r2_per_experiment[m.experiment_name] = r2
+
+#     r2_average = np.mean(list(r2_per_experiment.values()))
+#     return {"R2_per_experiment": r2_per_experiment, "R2_average": r2_average}
 
 
 
