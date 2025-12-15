@@ -1,0 +1,25 @@
+xtick.labelsize : 8
+ytick.labelsize : 8
+
+lines.linewidth : 1
+lines.linestyle : -
+lines.marker : None
+
+text.usetex : True
+text.latex.preamble : \usepackage{bm}
+
+font.serif : Computer Modern Roman
+font.size : 10
+font.family : serif
+
+axes.grid : True
+axes.grid.axis : both
+axes.labelsize : 8
+
+grid.linewidth : 0.5
+
+legend.loc : best
+legend.fontsize : 8
+
+savefig.bbox : tight
+savefig.dpi : 1000
