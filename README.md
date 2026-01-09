@@ -25,8 +25,11 @@ At the core of Material Fingerprinting is a straightforward pattern recognition 
 @article{flaschel2025material,
   author       = {Flaschel, Moritz and Martonová, Denisa and Veil, Carina and Kuhl, Ellen},
   title        = {Material Fingerprinting: A shortcut to material model discovery without solving optimization problems},
-  year         = {2025},
-  doi          = {10.48550/arXiv.2508.07831},
+  journal      = {Computer Methods in Applied Mechanics and Engineering},
+  volume       = {450},
+  pages        = {118573},
+  year         = {2026},
+  doi          = {10.1016/j.cma.2025.118573},
 }
 ```
 
